@@ -15,7 +15,7 @@ object wordCount {
     val sc = new SparkContext(spc)
 
 
-    val lines = sc.textFile("/Users/princessiria/Downloads/word_count.text")
+    val lines = sc.textFile("/Users/bigdataprincess/Downloads/word_count.text")
     val words = lines.flatMap(line => line.split(" "))
 
     val wordCounts = words.countByValue()
